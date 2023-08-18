@@ -10,7 +10,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useState, useEffect, useRef } from "react";
 import "leaflet-fullscreen/dist/leaflet.fullscreen.css";
-import "leaflet-fullscreen/dist/leaflet.fullscreen.js";
+import "leaflet-fullscreen/dist/Leaflet.fullscreen.js";
 
 const Map = ({
   center,
