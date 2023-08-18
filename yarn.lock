@@ -799,6 +799,13 @@
   resolved "https://registry.npmjs.org/@types/react-leaflet-fullscreen-plugin/-/react-leaflet-fullscreen-plugin-1.0.0.tgz"
   integrity sha512-Rj7g2hKLuVkmp2RMHY1Mkbp3pnTyHBJH/QyxYSwll+k/J6v35kGYEIs3HAdCUOS/1+1eRI6qK6U1q4p8CJE2aQ==
 
+"@types/react-leaflet@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/@types/react-leaflet/-/react-leaflet-3.0.0.tgz"
+  integrity sha512-p8R9mVKbCDDqOdW+M6GyJJuFn6q+IgDFYavFiOIvaWHuOe5kIHZEtCy1pfM43JIA6JiB3D/aDoby7C51eO+XSg==
+  dependencies:
+    react-leaflet "*"
+
 "@types/react-payment-inputs@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@types/react-payment-inputs/-/react-payment-inputs-1.1.0.tgz"
@@ -3333,7 +3340,7 @@ react-leaflet-fullscreen@^2.0.2:
     "@react-leaflet/core" "1.1.1"
     leaflet.fullscreen "1.6.0"
 
-react-leaflet@^4.2.1:
+react-leaflet@*, react-leaflet@^4.2.1:
   version "4.2.1"
   resolved "https://registry.npmjs.org/react-leaflet/-/react-leaflet-4.2.1.tgz"
   integrity sha512-p9chkvhcKrWn/H/1FFeVSqLdReGwn2qmiobOQGO3BifX+/vV/39qhY8dGqbdcPh1e6jxh/QHriLXr7a4eLFK4Q==
