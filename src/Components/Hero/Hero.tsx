@@ -1,12 +1,42 @@
-import React from "react";
+import React,{useState} from "react";
 import Styles from "../../styles/Landingpagemodules/Hero.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 import { FaMicrophoneAlt } from "react-icons/fa";
+import SpeechToText from "../VoiceCommand/VoiceInput";
 
-const Hero: React.FC = () => {
+const Hero = () => {
+
+  const [inputValue, setInputValue] = useState<string>('');
+  const [isRecording, setIsRecording] = useState<boolean>(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const handlePostData = () => {
+    // Perform the POST API call using Axios here with inputValue
+    // axios.post('YOUR_API_ENDPOINT', { data: inputValue })
+    //   .then(response => {
+    //     // Handle the API response here
+    //   })
+    //   .catch(error => {
+    //     // Handle errors here
+    //   });
+    console.log("Posting data:", inputValue);
+  };
+
+  const handleInputKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handlePostData();
+    }
+  };
+
+
+
+
   return (
     <div className={Styles.heroSlider}>
       <Swiper
@@ -46,15 +76,20 @@ const Hero: React.FC = () => {
           </p>
           <div className={Styles.CompleteInputField}>
             <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Search Here..."
+               type="text"
+               placeholder="Search here...."
+               value={inputValue}
+               onChange={handleInputChange}
+               onKeyDown={handleInputKeyPress}
               className={Styles.inputField}
             />
-            <div className={Styles.VoiceSearchIconBg}>
-              <FaMicrophoneAlt color="#FFFFFF" size={16.48} />
-            </div>
+           
+              {/* <FaMicrophoneAlt color="#FFFFFF" size={16.48} /> */}
+              <SpeechToText
+               setInputValue={setInputValue}
+               isRecording={isRecording}
+               setIsRecording={setIsRecording}
+              />
           </div>
         </div>
         <div className={Styles.bigOfferText}>Big Offers</div>

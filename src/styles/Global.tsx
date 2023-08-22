@@ -14,6 +14,91 @@ const GlobalStyles = createGlobalStyle`
     overflow-y: hidden !important;
 
   }
+
+  /* Add this to your CSS */
+@keyframes speaking-waves {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.speaking-waves {
+  animation: speaking-waves 0.5s infinite;
+  transform-origin: bottom center;
+}
+
+  .main_landing_mob
+  {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 100%;
+  }
+  .position_set_mob_landing
+  {
+    top: 5%;
+    position: absolute;
+    z-index: 100;
+    color: white;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+  }
+  .right_tendon
+  {
+    background-color: white;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  .big_heading
+  {
+    color: black;
+  }
+  .margin_top_buttton
+  {
+    margin-top: 100%;
+  }
+  .color_button_mob_landing
+  {
+    background-color: #FF6767 !important;
+    border: 1px solid #FF6767 !important;
+  }
+  .display_ind_sec
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .height_width_landing_ind
+  {
+    height: 70px;
+    width: 70px;
+    
+  }
+  .width_adj_ind
+  {
+    width: 300px !important;
+  }
+  .input_left_tendon
+  {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  .input_left_tendon:focus
+  {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  .heroSlidermob
   .position_set_notifcation
   {
     position: absolute;
@@ -3193,6 +3278,31 @@ display: none;
     margin-bottom: 300px;
   }
 @media only screen and (max-width: 600px) {
+  .card_width_further
+{
+  background-image: url(/imagess/maskgirl.png);
+  border-radius: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  height: 250px;
+  width: 100%;
+  position: relative;
+}
+
+
+
+.card_width_further1
+{
+  background-image: url(/imagess/maskgirl.png);
+  border-radius: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  height: 150px;
+  width: 100%;
+  position: relative;
+}
 
   .margin_bottom_new
   {

@@ -3,6 +3,13 @@
   position: relative;
 }
 
+.heroSlidermob {
+  width: 100%;
+  position: relative !important;
+  overflow-y: scroll;
+  z-index: 99;
+}
+
 .heroSlider img {
   width: 100%;
 }
@@ -68,6 +75,7 @@
   justify-content: center;
   align-items: center;
   margin-left: 15px;
+  border: 1px solid #df0303;
 }
 
 .bigOfferText {

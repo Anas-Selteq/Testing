@@ -890,7 +890,7 @@ export const verifyDispatchment = (data: any) => {
 export const getAllSectionsDetails = () => {
   return createApiConfigAndRequest(
     "get",
-    `${homePageSectionApi}Sections/getAllSectionsDetails`
+    `${homePageSectionApi}Sections/getAllSectionsDetails?countryId=1`
   );
 };
 
